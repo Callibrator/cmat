@@ -1,0 +1,26 @@
+{% macro render() -%}
+
+<div id='countries_drop_menu' class="drop-menu-buttons">
+    <span class='toggle-button'> <i class="fa fa-bars fa-lg"></i> Countries</span>
+    <div class='blue drop-toggle'>
+        <table id="countries-data-table" data-order='[[ 1, "asc" ]]' data-page-length='2500'>
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Serious Cases</th>
+                    <th>Total Tests</th>
+                    <th>Population</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+        </table>
+
+    </div>
+</div>
+
+<script src="{{app_uri}}/static/js/widgets/countries_datatable.js"></script>
+
+
+{% endmacro %}

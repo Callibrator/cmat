@@ -1,0 +1,154 @@
+body {
+    overflow-x: hidden;
+    padding-top: 55px;
+}
+
+.w-sidebar {
+    width: 200px;
+    max-width: 200px;
+    top: 0;
+    z-index: 1060;
+}
+
+.row.collapse {
+    margin-left: -200px;
+    left: 0;
+	transition: margin-left .15s linear;
+}
+
+.row.collapse.show {
+    margin-left: 0 !important;
+}
+
+.row.collapsing {
+    margin-left: -200px;
+    left: -0.05%;
+	transition: all .15s linear;
+}
+
+
+@media (max-width:768px) {
+
+    .row.collapse,
+    .row.collapsing {
+        margin-left: 0 !important;
+        left: 0 !important;
+        overflow: visible;
+    }
+
+    .row > .sidebar.collapse {
+        display: flex !important;
+        margin-left: -100% !important;
+        transition: all .3s linear;
+        position: fixed;
+        z-index: 1050;
+        max-width: 0;
+        min-width: 0;
+        flex-basis: auto;
+    }
+
+    .row > .sidebar.collapse.show {
+        margin-left: 0 !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: initial;
+    }
+
+    .row > .sidebar.collapsing {
+        display: flex !important;
+        margin-left: -10% !important;
+        transition: all .3s linear !important;
+        position: fixed;
+        z-index: 1050;
+        min-width: initial;
+    }
+
+}
+
+
+.loading-top-bar{
+    text-align: center;
+    color:gray;
+
+
+}
+
+@keyframes load-anim {
+  0% {background-color: rgba(246, 252, 124,0.5);}
+  25% {background-color: rgba(242, 111, 75,0.5);}
+  50% {background-color: rgba(116, 227, 123,0.5);}
+  75% {background-color: rgba(184, 94, 59,0.5);}
+  100% {background-color: rgba(246, 252, 124,0.5);}
+}
+
+
+.loading-bar{
+    padding: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0;
+    animation-name: load-anim;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+
+}
+
+#countries-data-table{
+    width:100% !important;
+}
+
+.basic_chart{
+    max-height: 400px;
+    max-width: 100%;
+    padding: 15px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 100%;
+
+}
+
+.width_50{
+    width: 50%;
+}
+
+.section-title{
+    text-align:center
+
+}
+
+.drop-menu-buttons{
+    padding-left:20px;
+}
+
+.multiple-charts{
+    display:flex;
+    justify-content:space-between;
+    margin-top: 70px;
+}
+
+.OptionsTable{
+    width: 100%;
+    text-align: center;
+}
+
+.share_uri_container{
+    padding:20px;
+}
+
+.share-url-label{
+    display: flex;
+    width: 100%;
+}
+
+.share-url-label > input[type=text]{
+    width:100%;
+}
+
+.small-block-image{
+    width:50px;
+}
+
+.info-col-center{
+    text-align:center;
+}

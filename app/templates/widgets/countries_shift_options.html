@@ -1,0 +1,36 @@
+{% macro render(name) -%}
+
+<div class="basic_chart">
+    <div class="section-title">
+        <h4>Options</h4>
+        <h6>Shift & Color Options</h6>
+    </div>
+
+    <div>
+        <table class="OptionsTable">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Color</th>
+                    <th>Total Cases</th>
+                    <th>Live Cases</th>
+                    <th>Daily Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Daily Deaths</th>
+                </tr>
+
+            </thead>
+            <tbody class="options_table_body">
+
+
+            </tbody>
+
+        </table>
+
+
+    </div>
+</div>
+
+<script src="{{app_uri}}static/js/widgets/country_options.js"></script>
+
+{% endmacro %}

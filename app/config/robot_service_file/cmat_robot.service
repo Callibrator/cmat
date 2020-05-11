@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve CMAT Robot
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/cmat/app
+Environment="PATH=/var/www/cmat/app"
+ExecStart=/var/www/cmat/venv/bin/python3 /var/www/cmat/app/robot_main.py
+
+[Install]
+WantedBy=multi-user.target

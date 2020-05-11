@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% import 'widgets/total_cases_linear_chart.html' as total_cases_linear_chart %}
+{% import 'widgets/countries_datatable.html' as countries_datatable %}
+{% import 'widgets/deaths_total_chart.html' as deaths_total_chart %}
+{% import 'widgets/deaths_daily_chart.html' as deaths_daily_chart %}
+{% import 'widgets/live_cases_chart.html' as live_cases_chart %}
+{% import 'widgets/daily_cases_chart.html' as daily_cases_chart %}
+{% import 'widgets/generate_share_uri.html' as generate_share_uri %}
+{% import 'widgets/countries_shift_options.html' as countries_shift_options %}
+
+{% block b %}
+
+
+
+
+
+{{ countries_datatable.render() }}
+
+{{ generate_share_uri.render() }}
+
+{{ total_cases_linear_chart.render() }}
+
+
+<div class="multiple-charts">
+
+    {{ live_cases_chart.render() }}
+    {{ daily_cases_chart.render() }}
+
+
+</div>
+
+
+<div class="multiple-charts">
+
+    {{ deaths_total_chart.render() }}
+    {{ deaths_daily_chart.render() }}
+
+</div>
+
+{{ countries_shift_options.render() }}
+
+
+
+<script src="{{app_uri}}static/js/index.js"></script>
+{% endblock %}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="{{app_uri}}/static/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="{{app_uri}}/static/bootstrap/bootstrap.min.css">
+
+
+    <script src="{{app_uri}}/static/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="{{app_uri}}/static/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{{app_uri}}/static/datatables/jquery.dataTables.min.css">
+    <script src="{{app_uri}}/static/datatables/jquery.dataTables.min.js"></script>
+
+    <script src="{{app_uri}}/static/chartjs/Chart.min.js"></script>
+    <script src="{{app_uri}}/static/simpleDrop/simpledrop-v0.0.1.js"></script>
+
+    <link rel="stylesheet" href="{{app_uri}}/static/css/style.css">
+    <script src="{{app_uri}}/static/js/layout.js"></script>
+    <script src="{{app_uri}}/static/js/helpers/create_linear_chart.js"></script>
+    <script src="{{app_uri}}/static/js/helpers/add_to_linear_chart.js"></script>
+    <script src="{{app_uri}}/static/js/helpers/remove_from_linear_chart.js"></script>
+    <script src="{{app_uri}}/static/js/helpers/create_bar_chart.js"></script>
+    <script src="{{app_uri}}/static/js/helpers/change_dataset_color.js"></script>
+    <script src="{{app_uri}}/static/js/helpers/shift_chart_line.js"></script>
+
+    <meta charset="UTF-8">
+    <title>CMAT</title>
+</head>
+
+
+
+<body>
+    <input type="hidden" value="{{app_uri}}" id="app_uri" />
+    <div class="container-fluid fixed-top bg-primary py-3">
+        <div class="row collapse no-gutters d-flex h-100 position-relative">
+            <div class="col-3 px-0 w-sidebar navbar-collapse collapse d-none d-md-flex">
+                <!-- spacer col -->
+            </div>
+            <div class="col px-3 px-md-0">
+                <!-- toggler -->
+                <a data-toggle="collapse" href="#" data-target=".collapse" role="button" class="text-white p-1">
+                    <i class="fa fa-bars fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="loading-data-bar" class="container-fluid loading-bar py-3">
+        <div class="row collapse no-gutters d-flex h-100 position-relative">
+            <div class="col-3 px-0 w-sidebar navbar-collapse collapse d-none d-md-flex">
+                    <!-- spacer col -->
+            </div>
+            <div class="col px-3 px-md-0">
+                <div id="loading-top-bar-text" class="loading-top-bar">Loading Data...</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0">
+        <div class="row collapse no-gutters d-flex h-100 position-relative">
+            <div class="col-3 p-0 h-100 w-sidebar navbar-collapse collapse d-none d-md-flex sidebar">
+                <!-- fixed sidebar -->
+                <div class="navbar-dark bg-dark text-white position-fixed h-100 align-self-start w-sidebar">
+                    <a data-toggle="collapse" class="px-1 d-inline text-white" href="#" data-target=".collapse"><h6 class="px-3 pt-3">Menu</h6></a>
+                    <ul class="nav flex-column flex-nowrap text-truncate">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/help">Help</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col p-3">
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {% block b %}
+
+    {% endblock %}
+
+
+
+</body>
+
+
+</html>

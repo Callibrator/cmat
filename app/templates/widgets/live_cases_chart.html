@@ -1,0 +1,12 @@
+{% macro render() -%}
+
+<div class="basic_chart width_50">
+    <div class="section-title">
+        <h4>Live Cases</h4>
+    </div>
+    <canvas id="live_cases_chart"></canvas>
+</div>
+
+<script src="{{app_uri}}/static/js/widgets/deaths.js"></script>
+
+{% endmacro %}

@@ -1,0 +1,16 @@
+{% macro render() -%}
+
+<div class="share_uri_container">
+    <label class="share-url-label">
+        <span>Share URI: </span>
+        <input type="text" value="" class="share_uri_entry" />
+        <input type="button" class="btn btn-success" value="copy" />
+    </label>
+
+
+</div>
+
+<script src="{{app_uri}}/static/js/widgets/share_uri.js"></script>
+
+
+{% endmacro %}

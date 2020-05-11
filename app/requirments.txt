@@ -1,0 +1,8 @@
+flask
+flask-login
+geonamescache
+pymongo
+beautifulsoup4
+lxml
+PyYAML
+
