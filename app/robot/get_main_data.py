@@ -18,34 +18,36 @@ def get_main_data():
 
     bData = Soup(data,"lxml")
     for row in bData.find(id="main_table_countries_today").find("tbody").findAll("tr"):
-        if row.find("td").text == "World":
-            continue
+
 
         if row.get("style") == "display: none":
             continue
 
         columns = row.findAll("td")
 
+        if columns[1].text == "World":
+            continue
 
 
 
-        objData[columns[0].text.strip().replace(".","")] = {
-            "total_cases": columns[1].text.replace(",",""),
-            "new_cases": columns[2].text.replace(",",""),
-            "total_deaths": columns[3].text.replace(",",""),
-            "new_deaths": columns[4].text.replace(",",""),
-            "total_recovered": columns[5].text.replace(",",""),
-            "active_cases": columns[6].text.replace(",",""),
-            "serious": columns[7].text.replace(",",""),
-            "total_tests": columns[10].text.replace(",","")
+        objData[columns[1].text.strip().replace(".","")] = {
+            "total_cases": columns[2].text.replace(",",""),
+            "new_cases": columns[3].text.replace(",",""),
+            "total_deaths": columns[4].text.replace(",",""),
+            "new_deaths": columns[5].text.replace(",",""),
+            "total_recovered": columns[6].text.replace(",",""),
+            "active_cases": columns[7].text.replace(",",""),
+            "serious": columns[8].text.replace(",",""),
+            "total_tests": columns[11].text.replace(",",""),
+            "population": columns[13].text.replace(",",""),
         }
 
 
 
-        c = columns[0].find("a")
+        c = columns[1].find("a")
 
         if c != None:
-            objData[columns[0].text.strip().replace(".","")]["link"] = c.get("href")
+            objData[columns[1].text.strip().replace(".","")]["link"] = c.get("href")
 
 
     return objData

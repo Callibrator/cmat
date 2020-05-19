@@ -32,6 +32,7 @@ def main():
     countries = gc.get_countries_by_names()
 
     main_data = get_main_data()
+
     country_history = {}
 
 

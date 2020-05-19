@@ -44,15 +44,10 @@ country_datatable.load_data_table = function(){
                     total_tests = NA
                 }
 
-                if ("more_info" in window.data.general.data[c]){
-                    if("population" in window.data.general.data[c]["more_info"])
-                    {
-                        population = parseInt(window.data.general.data[c]["more_info"]["population"])
-                        if(isNaN(population))
-                            population = NA
-                    }else{
+                if ("population" in window.data.general.data[c]){
+                    population = parseInt(window.data.general.data[c]["population"])
+                     if(isNaN(population))
                         population = NA
-                    }
                 }else{
                     population = NA
                 }
